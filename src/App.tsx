@@ -61,12 +61,10 @@ function App() {
             if (isCommandInputFocused) event.preventDefault();
         };
 
-        // Agregar los listeners de eventos
         window.addEventListener("keydown", handleKeyDown);
         window.addEventListener("keyup", handleKeyUp);
 
         return () => {
-            // Eliminar los listeners cuando el componente se desmonte o la dependencia cambie
             window.removeEventListener("keydown", handleKeyDown);
             window.removeEventListener("keyup", handleKeyUp);
         };
